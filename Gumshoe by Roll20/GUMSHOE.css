@@ -51,11 +51,11 @@ input.sheet-selector-switch:checked ~ .sheet-master-container .sheet-npc-full .s
 	width: auto;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-npc-full .sheet-input-row.sheet-npc-mods div {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-npc-full .sheet-input-row.sheet-npc-mods div {
 	width: 33%;
 }
 
-input.sheet-toc:checked ~ .sheet-master-container .sheet-npc-full .sheet-input-row.sheet-npc-mods div {
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-npc-full .sheet-input-row.sheet-npc-mods div {
 	width: 50%;
 }
 
@@ -88,35 +88,35 @@ input.sheet-selector-switch:checked ~ .sheet-master-container .sheet-resist h4 {
 	font-weight: normal;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-resistances .sheet-content {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-resistances .sheet-content {
 	display: table;
 	width: 100%;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-resistances .sheet-armor {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-resistances .sheet-armor {
 	display: table-cell;
 	box-sizing: border-box;
 	vertical-align: middle;
 	padding-right: 15px;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-resistances .sheet-armor-type {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-resistances .sheet-armor-type {
 	width: auto;
 	padding-top: 10px;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-resistances .sheet-armor label {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-resistances .sheet-armor label {
 	display: inline-block;
 	width: auto;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-resistances .sheet-resist label {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-resistances .sheet-resist label {
 	font-weight: normal;
 	font-size: 12px;
 	padding-right: 0;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-resistances .sheet-resist input[type=number] {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-resistances .sheet-resist input[type=number] {
 	width: 3em;
 }
 
@@ -144,8 +144,8 @@ input.sheet-selector-switch {
 	display: none;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-nba-hide,
-input.sheet-toc:checked ~ .sheet-master-container .sheet-toc-hide,
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-nba-hide,
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-toc-hide,
 input.sheet-npc:checked ~ input.sheet-selector-switch:checked ~ .sheet-master-container .sheet-npc-hide {
 	display: none;
 }
@@ -201,26 +201,26 @@ input[disabled] {
 }
 
 .sheet-right,
-input.sheet-toc:checked ~ .sheet-master-container .sheet-toc-right,
-input.sheet-nba:checked ~ .sheet-master-container .sheet-nba-right {
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-toc-right,
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-nba-right {
 	float: right;
 }
 
 .sheet-left,
-input.sheet-toc:checked ~ .sheet-master-container .sheet-toc-left,
-input.sheet-nba:checked ~ .sheet-master-container .sheet-nba-left {
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-toc-left,
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-nba-left {
 	float: left;
 }
 
 .sheet-clear,
-input.sheet-toc:checked ~ .sheet-master-container .sheet-toc-clear,
-input.sheet-nba:checked ~ .sheet-master-container .sheet-nba-clear {
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-toc-clear,
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-nba-clear {
 	clear: none !important;
 }
 
 .sheet-container .sheet-col,
-input.sheet-toc:checked ~ .sheet-master-container .sheet-toc-col,
-input.sheet-nba:checked ~ .sheet-master-container .sheet-nba-col {
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-toc-col,
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-nba-col {
 	width: calc(50% - 15px);
 	margin-right: 15px;
 	margin-top: 15px;
@@ -228,8 +228,8 @@ input.sheet-nba:checked ~ .sheet-master-container .sheet-nba-col {
 }
 
 .sheet-container .sheet-col-right,
-input.sheet-toc:checked ~ .sheet-master-container .sheet-toc-col-right,
-input.sheet-nba:checked ~ .sheet-master-container .sheet-nba-col-right {
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-toc-col-right,
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-nba-col-right {
 	margin-right: 0px;
 	width: calc(50% - 12px);
 	display: inline-block;
@@ -237,36 +237,36 @@ input.sheet-nba:checked ~ .sheet-master-container .sheet-nba-col-right {
 
 .sheet-col1,
 .sheet-col2,
-input.sheet-toc:checked ~ .sheet-master-container .sheet-toc-col1,
-input.sheet-toc:checked ~ .sheet-master-container .sheet-toc-col2,
-input.sheet-nba:checked ~ .sheet-master-container .sheet-nba-col1,
-input.sheet-nba:checked ~ .sheet-master-container .sheet-nba-col2 {
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-toc-col1,
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-toc-col2,
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-nba-col1,
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-nba-col2 {
 	clear: both;
 	vertical-align: top;
 	margin-top: 15px;
 }
 
 .sheet-col1,
-input.sheet-nba:checked ~ .sheet-master-container .sheet-nba-col1 {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-nba-col1 {
 	display: inline-block;
 	width: calc(33% - 18px);
 	margin-right: 15px;
 }
 
 .sheet-col2,
-input.sheet-nba:checked ~ .sheet-master-container .sheet-nba-col2 {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-nba-col2 {
 	width: calc(65% - 12px);
 	margin-right: 0px;
 	display: inline-block;
 }
 
-input.sheet-toc:checked ~ .sheet-master-container .sheet-toc-col1 {
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-toc-col1 {
 	display: inline-block;
 	width: calc(25% - 15px);
 	margin-right: 15px;
 }
 
-input.sheet-toc:checked ~ .sheet-master-container .sheet-toc-col2 {
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-toc-col2 {
 	width: calc(75% - 12px);
 	margin-right: 0px;
 }
@@ -1328,16 +1328,16 @@ input.sheet-npc:checked ~ input.sheet-selector-switch:checked ~ .sheet-master-co
 	display: inline-block;
 }
 
-input.sheet-npc:checked ~ input.sheet-toc:checked ~ .sheet-master-container .sheet-header {
+input.sheet-npc:checked ~ input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-header {
 	display: none;
 }
 
-input.sheet-npc:checked ~ input.sheet-nba:checked ~ .sheet-master-container .sheet-header.sheet-npc-full {
+input.sheet-npc:checked ~ input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-header.sheet-npc-full {
 	width: 525px;
 	overflow: hidden;
 }
 
-input.sheet-npc:checked ~ input.sheet-nba:checked ~ .sheet-master-container .sheet-header img {
+input.sheet-npc:checked ~ input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-header img {
 	width: 875px;
 	max-width: 875px;
 }
@@ -1369,14 +1369,14 @@ input.sheet-npc:checked ~ input.sheet-selector-switch:checked ~ .sheet-master-co
 }
 
 input.sheet-npc:checked ~ input.sheet-selector-switch:checked ~ .sheet-master-container .sheet-abilities-item,
-input.sheet-npc:checked ~ input.sheet-toc:checked ~ .sheet-master-container .sheet-abilities-col .sheet-abilities-item.sheet-nba-npc,
+input.sheet-npc:checked ~ input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-abilities-col .sheet-abilities-item.sheet-nba-npc,
 input.sheet-npc:checked ~ input.sheet-selector-switch:checked ~ .sheet-master-container .sheet-abilities-item span span,
 input.sheet-npc:checked ~ input.sheet-selector-switch:checked ~ .sheet-master-container .sheet-abilities-item .sheet-max,
 input.sheet-npc:checked ~ input.sheet-selector-switch:checked ~ .sheet-master-container .sheet-abilities-header,
 input.sheet-npc:checked ~ input.sheet-selector-switch:checked ~ .sheet-master-container .sheet-abilities-col,
 input.sheet-npc:checked ~ input.sheet-selector-switch:checked ~ .sheet-master-container .sheet-abilities-col .sheet-max + div,
-input.sheet-npc:checked ~ input.sheet-nba:checked ~ .sheet-master-container .sheet-abilities-item.sheet-npc-ability.sheet-nba-hide,
-input.sheet-npc:checked ~ input.sheet-toc:checked ~ .sheet-master-container .sheet-abilities-item.sheet-npc-ability.sheet-toc-hide,
+input.sheet-npc:checked ~ input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-abilities-item.sheet-npc-ability.sheet-nba-hide,
+input.sheet-npc:checked ~ input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-abilities-item.sheet-npc-ability.sheet-toc-hide,
 input.sheet-npc:checked ~ input.sheet-selector-switch:checked ~ .sheet-master-container .sheet-abilities .sheet-free,
 input.sheet-npc:checked ~ input.sheet-selector-switch:checked ~ .sheet-master-container .sheet-abilities .sheet-free + span,
 input.sheet-npc:checked ~ input.sheet-selector-switch:checked ~ .sheet-master-container .sheet-abilities-col .repcontrol,
@@ -1406,7 +1406,7 @@ input.sheet-npc:checked ~ input.sheet-selector-switch:checked ~ .sheet-master-co
 	left:10px;
 }
 
-input.sheet-npc:checked ~ input.sheet-toc:checked ~ .sheet-master-container .sheet-section {
+input.sheet-npc:checked ~ input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-section {
 	background: white;
 	min-height: 0;
 	min-width: 0;
@@ -1414,7 +1414,7 @@ input.sheet-npc:checked ~ input.sheet-toc:checked ~ .sheet-master-container .she
 	margin-bottom: 0;
 }
 
-input.sheet-toc:checked ~ .sheet-master-container .sheet-section::before {
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-section::before {
 	display: none;
 }
 
@@ -1463,8 +1463,8 @@ input.sheet-npc:checked ~ input.sheet-selector-switch:checked ~ .sheet-master-co
 
 input.sheet-selector-switch:checked ~ input.sheet-selector-switch:checked ~ .sheet-master-container .sheet-vampire,
 input.sheet-selector-switch:checked ~ input.sheet-selector-switch:checked ~ .sheet-master-container .sheet-vampire.sheet-abilities-item,
-input.sheet-selector-switch:checked ~ input.sheet-toc:checked ~ .sheet-master-container .sheet-toc-hide.sheet-pc-hide,
-input.sheet-selector-switch:checked ~ input.sheet-vamp:checked ~ input.sheet-toc:checked ~ .sheet-master-container .sheet-vampire,
+input.sheet-selector-switch:checked ~ input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-toc-hide.sheet-pc-hide,
+input.sheet-selector-switch:checked ~ input.sheet-vamp:checked ~ input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-vampire,
 input.sheet-npc:checked ~ input.sheet-vamp:checked ~ .sheet-master-container .sheet-vampire-hide.sheet-abilities-item,
 input.sheet-npc:checked ~ input.sheet-vamp:checked ~ .sheet-master-container .sheet-vampire-hide {
 	display: none;
@@ -1487,27 +1487,27 @@ input.sheet-npc:checked ~ input.sheet-vamp:checked ~ .sheet-master-container .sh
 /*------------- Cthulhu Styles --------------*/
 /*-------------------------------------------*/
 
-input.sheet-toc:checked ~ .sheet-master-container {
+input.sheet-gametype[value="toc"] ~ .sheet-master-container {
 	width: 850px;
 	background: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Gumshoe%20by%20Roll20/images/toc/background.png") no-repeat;
 	background-size: cover;
 	border-top: 2px solid #c9a800;
 }
 
-input.sheet-toc:checked ~ .sheet-master-container,
-input.sheet-toc:checked ~ p,
-input.sheet-toc:checked ~ .sheet-master-container input,
-input.sheet-toc:checked ~ .sheet-master-container select,
-input.sheet-toc:checked ~ .sheet-master-container label,
-input.sheet-toc:checked ~ .sheet-master-container button,
-input.sheet-toc:checked ~ .sheet-master-container textarea,
-input.sheet-toc:checked ~ .sheet-master-container .btn,
+input.sheet-gametype[value="toc"] ~ .sheet-master-container,
+input.sheet-gametype[value="toc"] ~ p,
+input.sheet-gametype[value="toc"] ~ .sheet-master-container input,
+input.sheet-gametype[value="toc"] ~ .sheet-master-container select,
+input.sheet-gametype[value="toc"] ~ .sheet-master-container label,
+input.sheet-gametype[value="toc"] ~ .sheet-master-container button,
+input.sheet-gametype[value="toc"] ~ .sheet-master-container textarea,
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .btn,
 .sheet-rolltemplate-toc,
 .sheet-rolltemplate-toc-weapon {
 	font-family: "Rockwell", "Courier New", "Times New Roman", serif;
 }
 
-input.sheet-toc:checked ~ .sheet-master-container .sheet-section {
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-section {
 	/* width: min: 120px; max: 630px; height: min: 150px; max: 900px; */
 	background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Gumshoe%20by%20Roll20/images/toc/tl-corner.png"),
 					  url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Gumshoe%20by%20Roll20/images/toc/tr-corner.png"),
@@ -1524,11 +1524,11 @@ input.sheet-toc:checked ~ .sheet-master-container .sheet-section {
 	min-width: 120px;
 }
 
-input.sheet-toc:checked ~ .sheet-master-container .sheet-section.sheet-ability-section {
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-section.sheet-ability-section {
 	background-size: auto, auto, auto, auto, 70% 56px, 70% 56px, 56px 90%, 56px 90%;
 }
 
-input.sheet-toc:checked ~ .sheet-master-container .sheet-section::before {
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-section::before {
 	top: 25px;
 	left: 25px;
 	right: 25px;
@@ -1539,38 +1539,38 @@ input.sheet-toc:checked ~ .sheet-master-container .sheet-section::before {
 	content: ' ';
 }
 
-input.sheet-toc:checked ~ .sheet-master-container .sheet-abilities-col .sheet-abilities-header {
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-abilities-col .sheet-abilities-header {
 	background-color: #c9a800;
 }
 
-input.sheet-toc:checked ~ .sheet-master-container .sheet-abilities-col,
-input.sheet-toc:checked ~ .sheet-master-container .sheet-abilities-col .sheet-abilities-item,
-input.sheet-toc:checked ~ .sheet-master-container .sheet-section .sheet-weapon,
-input.sheet-toc:checked ~ .sheet-master-container .sheet-content .sheet-table-flex,
-input.sheet-toc:checked ~ .sheet-master-container .sheet-content .sheet-table-head,
-input.sheet-toc:checked ~ .sheet-master-container .sheet-content .sheet-table-flex div,
-input.sheet-toc:checked ~ .sheet-master-container .sheet-content .sheet-table-flex input[type="radio"]:checked + span {
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-abilities-col,
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-abilities-col .sheet-abilities-item,
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-section .sheet-weapon,
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-content .sheet-table-flex,
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-content .sheet-table-head,
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-content .sheet-table-flex div,
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-content .sheet-table-flex input[type="radio"]:checked + span {
 	border-color: #c9a800;
 }
 
-input.sheet-toc:checked ~ .sheet-master-container .sheet-section .sheet-content {
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-section .sheet-content {
 	margin: 20px;
 }
 
-input.sheet-toc:checked ~ .sheet-master-container .sheet-content .sheet-table-head {
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-content .sheet-table-head {
 	margin-top: 10px;
 }
 
-input.sheet-toc:checked ~ .sheet-master-container .sheet-content .sheet-toc-col2 {
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-content .sheet-toc-col2 {
 	margin-left: 15px;
 }
 
-input.sheet-toc:checked ~ .sheet-master-container .sheet-notes-full {
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-notes-full {
 	float: right;
 	margin-top: 15px;
 }
 
-input.sheet-toc:checked ~ .sheet-master-container .sheet-notes-full div {
+input.sheet-gametype[value="toc"] ~ .sheet-master-container .sheet-notes-full div {
 	font-size: 18px;
 	font-weight: bold;
 }
@@ -1579,73 +1579,73 @@ input.sheet-toc:checked ~ .sheet-master-container .sheet-notes-full div {
 /*----------- Night's Black Agents ----------*/
 /*-------------------------------------------*/
 
-input.sheet-nba:checked ~ .sheet-master-container,
-input.sheet-nba:checked ~ p,
-input.sheet-nba:checked ~ .sheet-master-container input,
-input.sheet-nba:checked ~ .sheet-master-container select,
-input.sheet-nba:checked ~ .sheet-master-container label,
-input.sheet-nba:checked ~ .sheet-master-container button,
-input.sheet-nba:checked ~ .sheet-master-container textarea,
-input.sheet-nba:checked ~ .sheet-master-container .btn,
+input.sheet-gametype[value="nba"] ~ .sheet-master-container,
+input.sheet-gametype[value="nba"] ~ p,
+input.sheet-gametype[value="nba"] ~ .sheet-master-container input,
+input.sheet-gametype[value="nba"] ~ .sheet-master-container select,
+input.sheet-gametype[value="nba"] ~ .sheet-master-container label,
+input.sheet-gametype[value="nba"] ~ .sheet-master-container button,
+input.sheet-gametype[value="nba"] ~ .sheet-master-container textarea,
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .btn,
 .sheet-rolltemplate-nba,
 .sheet-rolltemplate-nba-weapon {
 	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, Poppins, sans-serif;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container input[type=number] {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container input[type=number] {
 	font-family: Arial, sans-serif;
 }
 
-input.sheet-nba:checked ~ .sheet-main-options:checked ~ .sheet-master-container {
+input.sheet-gametype[value="nba"] ~ .sheet-main-options:checked ~ .sheet-master-container {
 	padding-top: 0;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-nba-col {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-nba-col {
 	margin-top: 0;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-section .sheet-nba-col1 {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-section .sheet-nba-col1 {
 	margin-left: 0;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-nba-col-half {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-nba-col-half {
 	width: 50%;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-nba-fix {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-nba-fix {
 	margin-top: -7px;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-nba-fix b {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-nba-fix b {
 	font-weight: normal;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-nba-caps {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-nba-caps {
 	text-transform: uppercase;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-tables .sheet-table-flex {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-tables .sheet-table-flex {
 	border: 1px solid #dedede;
 	padding: 20px;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-tables .sheet-table-flex div {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-tables .sheet-table-flex div {
 	height: 29px;
 	border: none;
 	padding: 0;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-table-flex input[type="radio"] + span {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-table-flex input[type="radio"] + span {
 	padding-top: 4px;
 	font-size: 13px;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-table-flex input[type="radio"]:checked + span {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-table-flex input[type="radio"]:checked + span {
 	font-size: 15px;
 	border-width: 1px;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-tables .sheet-table-head {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-tables .sheet-table-head {
 	display: block;
 	float: left;
 	height: 100%;
@@ -1653,7 +1653,7 @@ input.sheet-nba:checked ~ .sheet-master-container .sheet-tables .sheet-table-hea
 	border: none;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-tables .sheet-table-head div {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-tables .sheet-table-head div {
 	transform: rotate(270deg);
 	float: right;
 	right: 20px;
@@ -1662,87 +1662,87 @@ input.sheet-nba:checked ~ .sheet-master-container .sheet-tables .sheet-table-hea
 	font-size: 18px;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-input-row label {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-input-row label {
 	line-height: 30px;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container textarea {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container textarea {
 	height: 60px;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-nba-left,
-input.sheet-nba:checked ~ .sheet-master-container .sheet-nba-col1 {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-nba-left,
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-nba-col1 {
 	margin-left: 30px;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-nba-col2 {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-nba-col2 {
 	margin-right: 30px;
 	width: calc(65% - 45px);
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-nba-full {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-nba-full {
 	margin-left: 30px;
 	width: calc(100% - 70px);
 	padding: 5px;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-footer {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-footer {
 	display: inline-block;
 	float: left;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-footer span {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-footer span {
 	padding-left: 40px;
 	font-size: 16px;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-notes-full div {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-notes-full div {
 	text-transform: uppercase;
 	font-weight: bold;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-options input[type=text] {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-options input[type=text] {
 	margin-left: 10px;
 	margin-bottom: 5px;
 	padding: 0;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-display span {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-display span {
 	font-size: 14px;
 	margin-left: 40px;
 	line-height: 25px;
 }
 /*----------- Abilities -----------*/
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-abilities-item button[type=roll] {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-abilities-item button[type=roll] {
 	width: 74%;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-general .sheet-abilities-item button[type=roll] {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-general .sheet-abilities-item button[type=roll] {
 	width: 70%;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-content input.sheet-edit,
-input.sheet-nba:checked ~ .sheet-master-container .sheet-content input.sheet-edit + span {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-content input.sheet-edit,
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-content input.sheet-edit + span {
 	top: 14px;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-abilities input.sheet-free,
-input.sheet-nba:checked ~ .sheet-master-container .sheet-abilities input.sheet-free + span {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-abilities input.sheet-free,
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-abilities input.sheet-free + span {
 	height: 24px;
 	width: 90px;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-abilities input.sheet-free-points {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-abilities input.sheet-free-points {
 	height: 1.7em;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-content input.sheet-edit + span {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-content input.sheet-edit + span {
 	z-index: 2;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-abilities-col .sheet-abilities-header,
-input.sheet-nba:checked ~ .sheet-master-container .sheet-abilities-col .sheet-abilities-header::first-line {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-abilities-col .sheet-abilities-header,
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-abilities-col .sheet-abilities-header::first-line {
 	background-color: #bbb;
 	color: black;
 	padding: 1px 10px 2px;
@@ -1750,59 +1750,59 @@ input.sheet-nba:checked ~ .sheet-master-container .sheet-abilities-col .sheet-ab
 	line-height: 1.5em;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-abilities-col {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-abilities-col {
 	border-color: #dedede;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container h2.sheet-nba-caps {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container h2.sheet-nba-caps {
 	font-size: 17px;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-weapons .sheet-display input {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-weapons .sheet-display input {
 	font-size: 14px;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-abilities-item button[type=roll] {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-abilities-item button[type=roll] {
 	font-size: 14px;
 	line-height: 1.95em;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-abilities-col .repcontrol {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-abilities-col .repcontrol {
 	height: 2.5em;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-abilities-col div::first-line,
-input.sheet-nba:checked ~ .sheet-master-container .sheet-abilities-col button[type=roll]::first-line,
-input.sheet-nba:checked ~ .sheet-master-container .sheet-abilities-col button[type=roll] span::first-line {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-abilities-col div::first-line,
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-abilities-col button[type=roll]::first-line,
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-abilities-col button[type=roll] span::first-line {
 	line-height: 1.5em;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-abilities-item .sheet-rep-title button[type=roll] span {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-abilities-item .sheet-rep-title button[type=roll] span {
 	line-height: 1.75em;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-abilities-col .sheet-subsection input {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-abilities-col .sheet-subsection input {
 	line-height: 1.6em;
 	font-size: 12px;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-general .sheet-abilities-item input.sheet-constraint[type=hidden][value*="x"] ~ button[type=roll],
-input.sheet-nba:checked ~ .sheet-master-container .sheet-general .sheet-abilities-item input.sheet-constraint[type=hidden][value*="x"] ~ div button[type=roll] span,
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-general .sheet-abilities-item input.sheet-constraint[type=hidden][value*="x"] ~ button[type=roll],
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-general .sheet-abilities-item input.sheet-constraint[type=hidden][value*="x"] ~ div button[type=roll] span,
 .sheet-content .sheet-ability-edit p.sheet-cherry-message span {
 	color: #8B0000;
 }
 
 /*----------- Repeating Abilities -----------*/
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-abilities-item .sheet-rep-title {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-abilities-item .sheet-rep-title {
 	width: 78%;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-general .sheet-abilities-item .sheet-rep-title {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-general .sheet-abilities-item .sheet-rep-title {
 	width: 74%;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-abilities-item .sheet-rep-title .sheet-options input {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-abilities-item .sheet-rep-title .sheet-options input {
 	width: 85%;
 	margin-top: 0;
 	margin-bottom: .2em;
@@ -1810,19 +1810,19 @@ input.sheet-nba:checked ~ .sheet-master-container .sheet-abilities-item .sheet-r
 	border-bottom: 1px solid black;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-abilities-item .sheet-rep-title button[type=roll] {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-abilities-item .sheet-rep-title button[type=roll] {
 	width: 100%;
 	padding-top: 0;
 	margin-top: -1px;
 }
 
 
-input.sheet-nba:checked ~ .sheet-master-container .sheet-abilities-item .sheet-rep-title .sheet-options-flag,
-input.sheet-nba:checked ~ .sheet-master-container .sheet-abilities-item .sheet-rep-title .sheet-options-flag + span {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-abilities-item .sheet-rep-title .sheet-options-flag,
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .sheet-abilities-item .sheet-rep-title .sheet-options-flag + span {
 	top: .25em;
 }
 
-input.sheet-nba:checked ~ .sheet-master-container .repcontrol {
+input.sheet-gametype[value="nba"] ~ .sheet-master-container .repcontrol {
 	margin-bottom: 2px;
 }
 

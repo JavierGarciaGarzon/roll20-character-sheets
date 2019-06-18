@@ -1,8 +1,8 @@
 <input class="selector-switch npc" name="attr_npcswitch" type="checkbox" value="1">
 <input class="selector-switch vamp" name="attr_vampswitch" type="checkbox" value="1">
 
-<input class="selector-switch toc" name="attr_sheetswitch" type="radio" value="toc" checked="true">
-<input class="selector-switch nba" name="attr_sheetswitch" type="radio" value="nba">
+<input class="selector-switch gametype" name="attr_gamesheet" type="checkbox" value="toc" checked="true">
+
 
 <div class="master-container">
 
@@ -12,7 +12,7 @@
 	<div class="content">
 		<div class="input-row top-row">
 			<label data-i18n="system:-o">System: </label>
-			<select name="attr_sheetsettings">
+			<select name="attr_gamesheet">
 				<option data-i18n="trail-of-cthulhu-o" value="toc" selected="true">Trail of Cthulhu</option>
 				<option data-i18n="nights-black-agents-o" value="nba">Night's Black Agents</option>
 			</select>
@@ -25,9 +25,9 @@
 	<div class="content npc-hide">
 		<div class="input-row">
 			<label data-i18n="inv-build-points">Investigative Build Points: </label>
-			<input name="attr_inv_points_max" type="number" value="16">
+			<input name="attr_inv_points_default" type="number" value="16">
 			<label data-i18n="gen-build-points">General Build Points: </label>
-			<input name="attr_gen_points_max" type="number" value="65">
+			<input name="attr_gen_points_default" type="number" value="65">
 		</div>
 	</div>
 	<div class="content starting-abilities npc-hide">
@@ -1445,7 +1445,7 @@
 							<input class="constraint" name="attr_aberrance_constraint" type="hidden" value="abd">
 							<input name="attr_aberrance_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="aberrance-a" type="roll" name="attr_aberrance_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{aberrance_dice} {{rname=^{aberrance-a}}}">
+								value="&{template:@{gamesheet}} @{aberrance_dice} {{rname=^{aberrance-a}}}">
 								Aberrance
 							</button>
 							<span>
@@ -1460,7 +1460,7 @@
 							<input class="constraint" name="attr_athletics_constraint" type="hidden" value="abd">
 							<input name="attr_athletics_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="athletics-a" type="roll" name="attr_athletics_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{athletics_dice} {{rname=^{athletics-a}}}">
+								value="&{template:@{gamesheet}} @{athletics_dice} {{rname=^{athletics-a}}}">
 								Athletics
 							</button>
 							<span>
@@ -1480,7 +1480,7 @@
 							<input class="constraint" name="attr_conceal_constraint" type="hidden" value="abd">
 							<input name="attr_conceal_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="conceal-a" type="roll" name="attr_conceal_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{conceal_dice} {{rname=^{conceal-a}}}">
+								value="&{template:@{gamesheet}} @{conceal_dice} {{rname=^{conceal-a}}}">
 								Conceal
 							</button>
 							<span>
@@ -1500,7 +1500,7 @@
 							<input class="constraint" name="attr_cover_constraint" type="hidden" value="abd">
 							<input name="attr_cover_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="cover-a" type="roll" name="attr_cover_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{cover_dice} {{rname=^{cover-a}}}">
+								value="&{template:@{gamesheet}} @{cover_dice} {{rname=^{cover-a}}}">
 								Cover
 							</button>
 							<span>
@@ -1520,7 +1520,7 @@
 							<input class="constraint" name="attr_digital-intrusion_constraint" type="hidden" value="abd">
 							<input name="attr_digital-intrusion_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="digital-intrusion-a" type="roll" name="attr_digital-intrusion_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{digital-intrusion_dice} {{rname=^{digital-intrusion-a}}}">
+								value="&{template:@{gamesheet}} @{digital-intrusion_dice} {{rname=^{digital-intrusion-a}}}">
 								Digital Intrusion
 							</button>
 							<span>
@@ -1540,7 +1540,7 @@
 							<input class="constraint" name="attr_disguise_constraint" type="hidden" value="abd">
 							<input name="attr_disguise_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="disguise-a" type="roll" name="attr_disguise_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{disguise_dice} {{rname=^{disguise-a}}}">
+								value="&{template:@{gamesheet}} @{disguise_dice} {{rname=^{disguise-a}}}">
 								Disguise
 							</button>
 							<span>
@@ -1560,7 +1560,7 @@
 							<input class="constraint" name="attr_driving_constraint" type="hidden" value="abd">
 							<input name="attr_driving_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="driving-a" type="roll" name="attr_driving_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{driving_dice} {{rname=^{driving-a}}}">
+								value="&{template:@{gamesheet}} @{driving_dice} {{rname=^{driving-a}}}">
 								Driving
 							</button>
 							<span>
@@ -1585,7 +1585,7 @@
 							<input class="constraint" name="attr_electrical-repair_constraint" type="hidden" value="abd">
 							<input name="attr_electrical-repair_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="electrical-repair-a" type="roll" name="attr_electrical-repair_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{electrical-repair_dice} {{rname=^{electrical-repair-a}}}">
+								value="&{template:@{gamesheet}} @{electrical-repair_dice} {{rname=^{electrical-repair-a}}}">
 								Electrical Repair
 							</button>
 							<span>
@@ -1604,7 +1604,7 @@
 							<input class="constraint" name="attr_explosive-devices_constraint" type="hidden" value="abd">
 							<input name="attr_explosive-devices_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="explosive-devices-a" type="roll" name="attr_explosive-devices_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{explosive-devices_dice} {{rname=^{explosive-devices-a}}}">
+								value="&{template:@{gamesheet}} @{explosive-devices_dice} {{rname=^{explosive-devices-a}}}">
 								Explosive Devices
 							</button>
 							<span>
@@ -1624,7 +1624,7 @@
 							<input class="constraint" name="attr_explosives_constraint" type="hidden" value="abd">
 							<input name="attr_explosives_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="explosives-a" type="roll" name="attr_explosives_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{explosives_dice} {{rname=^{explosives-a}}}">
+								value="&{template:@{gamesheet}} @{explosives_dice} {{rname=^{explosives-a}}}">
 								Explosives
 							</button>
 							<span>
@@ -1643,7 +1643,7 @@
 							<input class="constraint" name="attr_filch_constraint" type="hidden" value="abd">
 							<input name="attr_filch_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="filch-a" type="roll" name="attr_filch_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{filch_dice} {{rname=^{filch-a}}}">
+								value="&{template:@{gamesheet}} @{filch_dice} {{rname=^{filch-a}}}">
 								Filch
 							</button>
 							<span>
@@ -1663,7 +1663,7 @@
 							<input class="constraint" name="attr_firearms_constraint" type="hidden" value="abd">
 							<input name="attr_firearms_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="firearms-a" type="roll" name="attr_firearms_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{firearms_dice} {{rname=^{firearms-a}}}">
+								value="&{template:@{gamesheet}} @{firearms_dice} {{rname=^{firearms-a}}}">
 								Firearms
 							</button>
 							<span>
@@ -1682,7 +1682,7 @@
 							<input class="constraint" name="attr_first-aid_constraint" type="hidden" value="abd">
 							<input name="attr_first-aid_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="first-aid-a" type="roll" name="attr_first-aid_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{first-aid_dice} {{rname=^{first-aid-a}}}">
+								value="&{template:@{gamesheet}} @{first-aid_dice} {{rname=^{first-aid-a}}}">
 								First Aid
 							</button>
 							<span>
@@ -1701,7 +1701,7 @@
 							<input class="constraint" name="attr_fleeing_constraint" type="hidden" value="abd">
 							<input name="attr_fleeing_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="fleeing-a" type="roll" name="attr_fleeing_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{fleeing_dice} {{rname=^{fleeing-a}}}">
+								value="&{template:@{gamesheet}} @{fleeing_dice} {{rname=^{fleeing-a}}}">
 								Fleeing
 							</button>
 							<span>
@@ -1720,7 +1720,7 @@
 							<input class="constraint" name="attr_gambling_constraint" type="hidden" value="abd">
 							<input name="attr_gambling_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="gambling-a" type="roll" name="attr_gambling_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{gambling_dice} {{rname=^{gambling-a}}}">
+								value="&{template:@{gamesheet}} @{gambling_dice} {{rname=^{gambling-a}}}">
 								Gambling
 							</button>
 							<span>
@@ -1740,7 +1740,7 @@
 							<input class="constraint" name="attr_hand-to-hand_constraint" type="hidden" value="abd">
 							<input name="attr_hand-to-hand_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="hand-to-hand-a" type="roll" name="attr_hand-to-hand_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{hand-to-hand_dice} {{rname=^{hand-to-hand-a}}}">
+								value="&{template:@{gamesheet}} @{hand-to-hand_dice} {{rname=^{hand-to-hand-a}}}">
 								Hand-to-Hand
 							</button>
 							<span>
@@ -1760,7 +1760,7 @@
 							<input class="constraint" name="attr_health_constraint" type="hidden" value="abd">
 							<input name="attr_health_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="health-a" type="roll" name="attr_health_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{health_dice} {{rname=^{health-a}}}">
+								value="&{template:@{gamesheet}} @{health_dice} {{rname=^{health-a}}}">
 								Health
 							</button>
 							<span>
@@ -1779,7 +1779,7 @@
 							<input class="constraint" name="attr_hypnosis_constraint" type="hidden" value="abd">
 							<input name="attr_hypnosis_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="hypnosis-a" type="roll" name="attr_hypnosis_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{hypnosis_dice} {{rname=^{hypnosis-a}}}">
+								value="&{template:@{gamesheet}} @{hypnosis_dice} {{rname=^{hypnosis-a}}}">
 								Hypnosis
 							</button>
 							<span>
@@ -1798,7 +1798,7 @@
 							<input class="constraint" name="attr_infiltration_constraint" type="hidden" value="abd">
 							<input name="attr_infiltration_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="infiltration-a" type="roll" name="attr_infiltration_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{infiltration_dice} {{rname=^{infiltration-a}}}">
+								value="&{template:@{gamesheet}} @{infiltration_dice} {{rname=^{infiltration-a}}}">
 								Infiltration
 							</button>
 							<span>
@@ -1818,7 +1818,7 @@
 							<input class="constraint" name="attr_mechanical-repair_constraint" type="hidden" value="abd">
 							<input name="attr_mechanical-repair_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="mechanical-repair-a" type="roll" name="attr_mechanical-repair_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{mechanical-repair_dice} {{rname=^{mechanical-repair-a}}}">
+								value="&{template:@{gamesheet}} @{mechanical-repair_dice} {{rname=^{mechanical-repair-a}}}">
 								Mechanical Repair
 							</button>
 							<span>
@@ -1837,7 +1837,7 @@
 							<input class="constraint" name="attr_mechanics_constraint" type="hidden" value="abd">
 							<input name="attr_mechanics_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="mechanics-a" type="roll" name="attr_mechanics_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{mechanics_dice} {{rname=^{mechanics-a}}}">
+								value="&{template:@{gamesheet}} @{mechanics_dice} {{rname=^{mechanics-a}}}">
 								Mechanics
 							</button>
 							<span>
@@ -1857,7 +1857,7 @@
 							<input class="constraint" name="attr_medic_constraint" type="hidden" value="abd">
 							<input name="attr_medic_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="medic-a" type="roll" name="attr_medic_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{medic_dice} {{rname=^{medic-a}}}">
+								value="&{template:@{gamesheet}} @{medic_dice} {{rname=^{medic-a}}}">
 								Medic
 							</button>
 							<span>
@@ -1877,7 +1877,7 @@
 							<input class="constraint" name="attr_network_constraint" type="hidden" value="abd">
 							<input name="attr_network_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="network-a" type="roll" name="attr_network_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{network_dice} {{rname=^{network-a}}}">
+								value="&{template:@{gamesheet}} @{network_dice} {{rname=^{network-a}}}">
 								Network
 							</button>
 							<span>
@@ -1897,7 +1897,7 @@
 							<input class="constraint" name="attr_piloting_constraint" type="hidden" value="abd">
 							<input name="attr_piloting_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="piloting-a" type="roll" name="attr_piloting_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{piloting_dice} {{rname=^{piloting-a}}}">
+								value="&{template:@{gamesheet}} @{piloting_dice} {{rname=^{piloting-a}}}">
 								Piloting
 							</button>
 							<span>
@@ -1922,7 +1922,7 @@
 							<input class="constraint" name="attr_preparedness_constraint" type="hidden" value="abd">
 							<input name="attr_preparedness_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="preparedness-a" type="roll" name="attr_preparedness_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{preparedness_dice} {{rname=^{preparedness-a}}}">
+								value="&{template:@{gamesheet}} @{preparedness_dice} {{rname=^{preparedness-a}}}">
 								Preparedness
 							</button>
 							<span>
@@ -1942,7 +1942,7 @@
 							<input class="constraint" name="attr_psychoanalysis_constraint" type="hidden" value="abd">
 							<input name="attr_psychoanalysis_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="psychoanalysis-a" type="roll" name="attr_psychoanalysis_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{psychoanalysis_dice} {{rname=^{psychoanalysis-a}}}">
+								value="&{template:@{gamesheet}} @{psychoanalysis_dice} {{rname=^{psychoanalysis-a}}}">
 								Psychoanalysis
 							</button>
 							<span>
@@ -1961,7 +1961,7 @@
 							<input class="constraint" name="attr_riding_constraint" type="hidden" value="abd">
 							<input name="attr_riding_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="riding-a" type="roll" name="attr_riding_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{riding_dice} {{rname=^{riding-a}}}">
+								value="&{template:@{gamesheet}} @{riding_dice} {{rname=^{riding-a}}}">
 								Riding
 							</button>
 							<span>
@@ -1980,7 +1980,7 @@
 							<input class="constraint" name="attr_sanity_constraint" type="hidden" value="abd">
 							<input name="attr_sanity_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="sanity-a" type="roll" name="attr_sanity_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{sanity_dice} {{rname=^{sanity-a}}}">
+								value="&{template:@{gamesheet}} @{sanity_dice} {{rname=^{sanity-a}}}">
 								Sanity
 							</button>
 							<span>
@@ -1999,7 +1999,7 @@
 							<input class="constraint" name="attr_scuffling_constraint" type="hidden" value="abd">
 							<input name="attr_scuffling_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="scuffling-a" type="roll" name="attr_scuffling_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{scuffling_dice} {{rname=^{scuffling-a}}}">
+								value="&{template:@{gamesheet}} @{scuffling_dice} {{rname=^{scuffling-a}}}">
 								Scuffling
 							</button>
 							<span>
@@ -2018,7 +2018,7 @@
 							<input class="constraint" name="attr_sense-trouble_constraint" type="hidden" value="abd">
 							<input name="attr_sense-trouble_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="sense-trouble-a" type="roll" name="attr_sense-trouble_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{sense-trouble_dice} {{rname=^{sense-trouble-a}}}">
+								value="&{template:@{gamesheet}} @{sense-trouble_dice} {{rname=^{sense-trouble-a}}}">
 								Sense Trouble
 							</button>
 							<span>
@@ -2038,7 +2038,7 @@
 							<input class="constraint" name="attr_shadowing_constraint" type="hidden" value="abd">
 							<input name="attr_shadowing_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="shadowing-a" type="roll" name="attr_shadowing_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{shadowing_dice} {{rname=^{shadowing-a}}}">
+								value="&{template:@{gamesheet}} @{shadowing_dice} {{rname=^{shadowing-a}}}">
 								Shadowing
 							</button>
 							<span>
@@ -2057,7 +2057,7 @@
 							<input class="constraint" name="attr_shooting_constraint" type="hidden" value="abd">
 							<input name="attr_shooting_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="shooting-a" type="roll" name="attr_shooting_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{shooting_dice} {{rname=^{shooting-a}}}">
+								value="&{template:@{gamesheet}} @{shooting_dice} {{rname=^{shooting-a}}}">
 								Shooting
 							</button>
 							<span>
@@ -2077,7 +2077,7 @@
 							<input class="constraint" name="attr_shrink_constraint" type="hidden" value="abd">
 							<input name="attr_shrink_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="shrink-a" type="roll" name="attr_shrink_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{shrink_dice} {{rname=^{shrink-a}}}">
+								value="&{template:@{gamesheet}} @{shrink_dice} {{rname=^{shrink-a}}}">
 								Shrink
 							</button>
 							<span>
@@ -2097,7 +2097,7 @@
 							<input class="constraint" name="attr_stability_constraint" type="hidden" value="abd">
 							<input name="attr_stability_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="stability-a" type="roll" name="attr_stability_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{stability_dice} {{rname=^{stability-a}}}">
+								value="&{template:@{gamesheet}} @{stability_dice} {{rname=^{stability-a}}}">
 								Stability
 							</button>
 							<span>
@@ -2116,7 +2116,7 @@
 							<input class="constraint" name="attr_stealth_constraint" type="hidden" value="abd">
 							<input name="attr_stealth_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="stealth-a" type="roll" name="attr_stealth_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{stealth_dice} {{rname=^{stealth-a}}}">
+								value="&{template:@{gamesheet}} @{stealth_dice} {{rname=^{stealth-a}}}">
 								Stealth
 							</button>
 							<span>
@@ -2135,7 +2135,7 @@
 							<input class="constraint" name="attr_surveillance_constraint" type="hidden" value="abd">
 							<input name="attr_surveillance_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="surveillance-a" type="roll" name="attr_surveillance_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{surveillance_dice} {{rname=^{surveillance-a}}}">
+								value="&{template:@{gamesheet}} @{surveillance_dice} {{rname=^{surveillance-a}}}">
 								Surveillance
 							</button>
 							<span>
@@ -2155,7 +2155,7 @@
 							<input class="constraint" name="attr_weapons_constraint" type="hidden" value="abd">
 							<input name="attr_weapons_dice" type="hidden" value="@{basic_roll}">
 							<button data-i18n="weapons-a" type="roll" name="attr_weapons_roll" class="abilities-title"
-								value="&{template:@{sheetswitch}} @{weapons_dice} {{rname=^{weapons-a}}}">
+								value="&{template:@{gamesheet}} @{weapons_dice} {{rname=^{weapons-a}}}">
 								Weapons
 							</button>
 							<span>
@@ -2183,7 +2183,7 @@
 									</div>
 									<div class="display">
 										<button type="roll" name="attr_r-general_roll" class="abilities-title rep-title"
-											value="&{template:@{sheetswitch}} @{r-general_dice} {{rname=@{r-general_title}}}">
+											value="&{template:@{gamesheet}} @{r-general_dice} {{rname=@{r-general_title}}}">
 											<span name="attr_r-general_title"></span>
 										</button>
 									</div>
@@ -2251,7 +2251,7 @@
 					<div class="display">
 						<span data-i18n="unarmed-attack" class="weapon-name">Unarmed Attack</span>
 						<div class="weapon-rollers">
-							<button type="roll" value="&{template:@{sheetswitch}-weapon} {{name=@{character_name}}} {{roll=[[1d6+@{unarmed_mod}]]}} {{rname=^{unarmed-attack}}}">
+							<button type="roll" value="&{template:@{gamesheet}-weapon} {{name=@{character_name}}} {{roll=[[1d6+@{unarmed_mod}]]}} {{rname=^{unarmed-attack}}}">
 								<b data-i18n="attack-w">Attack</b>(<span name="attr_unarmed_mod"></span>)
 							</button>
 						</div>
@@ -2384,19 +2384,19 @@
 							<span class="weapon-name" name="attr_weapon"></span>
 							<span data-i18n="capacity:-w" class="capacity nba-hide">Capacity: </span><span name="attr_capacity" class="capacity"></span>
 							<div class="weapon-rollers">
-								<button type="roll" class="melee-button" value="&{template:@{sheetswitch}-weapon} {{name=@{character_name}}} @{melee_roll} {{rname=@{weapon}}}">
+								<button type="roll" class="melee-button" value="&{template:@{gamesheet}-weapon} {{name=@{character_name}}} @{melee_roll} {{rname=@{weapon}}}">
 									<b data-i18n="attack-w">Attack</b>(<span name="attr_melee_mod"></span>)
 								</button>
-								<button  type="roll" value="&{template:@{sheetswitch}-weapon} {{name=@{character_name}}} @{point-blank_roll} {{rname=@{weapon}}}">
+								<button  type="roll" value="&{template:@{gamesheet}-weapon} {{name=@{character_name}}} @{point-blank_roll} {{rname=@{weapon}}}">
 									<b data-i18n="point-blank-w">Point-Blank</b>(<span name="attr_point-blank_mod"></span>)
 								</button>
-								<button  type="roll" value="&{template:@{sheetswitch}-weapon} {{name=@{character_name}}} @{close_roll} {{rname=@{weapon}}}">
+								<button  type="roll" value="&{template:@{gamesheet}-weapon} {{name=@{character_name}}} @{close_roll} {{rname=@{weapon}}}">
 									<b data-i18n="close-w">Close</b>(<span name="attr_close_mod"></span>)
 								</button>
-								<button  type="roll" value="&{template:@{sheetswitch}-weapon} {{name=@{character_name}}} @{near_roll} {{rname=@{weapon}}}">
+								<button  type="roll" value="&{template:@{gamesheet}-weapon} {{name=@{character_name}}} @{near_roll} {{rname=@{weapon}}}">
 									<b data-i18n="near-w">Near</b>(<span name="attr_near_mod"></span>)
 								</button>
-								<button type="roll" class="long-range" value="&{template:@{sheetswitch}-weapon} {{name=@{character_name}}} @{long_roll} {{rname=@{weapon}}}">
+								<button type="roll" class="long-range" value="&{template:@{gamesheet}-weapon} {{name=@{character_name}}} @{long_roll} {{rname=@{weapon}}}">
 									<b data-i18n="long-w" class="long">Long</b><b data-i18n="slash-extended" class="slash">/Extended</b><b data-i18n="parenthetical-extended" class="extended">(Extended)</b>(<span name="attr_long_mod"></span>)
 								</button>
 							</div>
@@ -2877,7 +2877,7 @@ var currentAbilities = {},
 		});
 	};
 
-on("sheet:opened change:sheetsettings", function(eventInfo) {
+on("sheet:opened change:gamesheet", function(eventInfo) {
 	let systemAbilities = {
 			tocAcademic: ['accounting', 'anthropology', 'archaeology', 'architecture', 'art-history', 'biology', 'cthulhu-mythos', 'cryptography', 'geology', 'history', 'languages', 'law', 'library-use', 'medicine', 'occult', 'physics', 'theology'],
 			tocInterpersonal: ['assess-honesty', 'bargain', 'bureaucracy', 'cop-talk', 'credit-rating', 'flattery', 'interrogation', 'intimidation', 'oral-history', 'reassurance', 'streetwise'],
@@ -2888,10 +2888,10 @@ on("sheet:opened change:sheetsettings", function(eventInfo) {
 			nbaTechnical: ['astronomy', 'chemistry', 'cryptography', 'data-recovery', 'electronic-surveillance', 'forensic-pathology', 'forgery', 'notice', 'outdoor-survival', 'pharmacy', 'photography', 'traffic-analysis', 'urban-survival'],
 			nbaGeneral: ['athletics', 'conceal', 'cover', 'digital-intrusion', 'disguise', 'driving', 'explosive-devices', 'filch', 'gambling', 'hand-to-hand', 'health', 'infiltration', 'mechanics', 'medic', 'network', 'piloting', 'preparedness', 'sense-trouble', 'shooting', 'shrink', 'stability', 'surveillance', 'weapons']};
 
-	getAttrs(["health_default", "stability_default", "sanity_default", "cover_default", "network_default", "sheetsettings", "firstopen"], function(values) {
+	getAttrs(["health_default", "stability_default", "sanity_default", "cover_default", "network_default", "gen_points_default", "inv_points_default", "gamesheet", "firstopen"], function(values) {
 		let updates = {version: 0.5};
 
-		system = values.sheetsettings;
+		system = values.gamesheet;
 		_.each(sections, function(section) {
 			tempArray = systemAbilities[system + section[0].toUpperCase() + section.substr(1)];
 			currentAbilities[section] = tempArray;
@@ -2901,13 +2901,15 @@ on("sheet:opened change:sheetsettings", function(eventInfo) {
 		});
 
 		if(!values.firstopen) {
-			_.each(["health", "stability", "sanity", "cover", "network"], function(ability) {
+			_.each(["health", "stability", "sanity", "cover", "network", "gen_points", "inv_points"], function(ability) {
 				updates[ability + '_free'] = values[ability + "_default"];
 				if(!npc) {
 					updates[ability + '_max'] = updates[ability + "_free"];
 					updates[ability] = updates[ability + "_free"];
 				}
 			});
+			console.log("setting default values, firstopen of sheet");
+
 			updates.sanity_marker = updates.sanity_free;
 			updates.firstopen = 1;
 		}
@@ -2916,14 +2918,13 @@ on("sheet:opened change:sheetsettings", function(eventInfo) {
 			updates.vampswitch = 0;
 		}
 
-		updates.sheetswitch = values.sheetsettings;
 		setAttrs(updates, {}, function() {
 			getSectionTotal();
 		});
 	});
 });
 
-on(changeString(["health", "stability", "sanity", "cover", "network"], ["default"]), function(eventInfo) {
+on(changeString(["health", "stability", "sanity", "cover", "network","gen_points", "inv_points"], ["default"]), function(eventInfo) {
 	let trigger = eventInfo.sourceAttribute.split('_')[0],
 		updates = {};
 
