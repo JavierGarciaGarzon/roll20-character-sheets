@@ -68,6 +68,11 @@
     - "Earthdawn (FASA Official)"
     - "Earthdawn by FASA"
     - "Earthdawn"
+    
+  hcsvntdracones:
+    - "Hc Svnt Dracones Second Edition"
+    - "Hc Svnt Dracones 2E by From Weapons Grade Funk"
+    - "Hc Svnt Dracones"
 
   reachoftitanofficial:
     - "ReachofTitan"
@@ -1471,6 +1476,7 @@ silhouettecore:
 - "Silhouette Core"
 
 hcsvntdracones:
+- "Hc Svnt Dracones"
 - "Hc Svnt Dracones"
 - "Hc Svnt Dracones"
 
@@ -2935,5 +2941,10 @@ L5R5thedition:
 storiesuntold:
   - "Stories Untold"
   - "Stories Untold"
+
+bluebeardbride:
+  - "Bluebeard's Bride"
+  - "Bluebeard's Bride"
+
 
 
